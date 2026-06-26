@@ -61,4 +61,4 @@ Given an integer array `nums` and an integer `k`, return the total number of **c
 
 ## LeetCode Link
 
-- https://leetcode.com/problems/subarray-sum-equals-k/
+- https://leetcode.com/problems/subarray-sum-equals-k/solutions/8359195/subarray-sum-equals-to-k-by-9w0hwvxjmq-4ndn
