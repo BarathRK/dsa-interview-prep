@@ -1,86 +1,62 @@
-\\# Linked List 3: LinkedList cycle 2
+\# Linked List 3: Linked List Cycle II
 
 
 
+\---
 
 
 
+\## Pattern
 
-\\## Pattern
 
 
+\*\*Cycle detection\*\*
 
 
 
+\---
 
 
-\\\*\\\*Cycle detection\\\*\\\*
 
+\## Problem Statement
 
 
 
+Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return `null`.
 
 
 
-\\---
+\---
 
 
 
+\## Constraints
 
 
 
+\- The number of nodes in the list is in the range `\[0, 10^4]`
 
-\\## Problem Statement
+\- `-10^5 <= Node.val <= 10^5`
 
+\- `pos` is `-1` or a valid index in the linked list
 
 
 
+\---
 
 
 
-Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return null.
+\## Optimal Approach
 
 
 
+1\. Initialize `slow` and `fast` pointers at the head.
 
+2\. Move `slow` by one step and `fast` by two steps to detect a cycle.
 
-\\## Constraints
+3\. If `slow` and `fast` never meet, return `None` (no cycle exists).
 
-
-
-
-
-
-
-The number of the nodes in the list is in the range \[0, 104].
-
-\-105 <= Node.val <= 105
-
-pos is -1 or a valid index in the linked-list.
-
-
-
-
-
-\\---
-
-
-
-
-
-
-
-\\## Optimal Approach 
-
-
-
-1\. Initialize slow and fast pointers at the head.
-
-2\. Move slow by one step and fast by two steps to detect a cycle.
-
-3\. If slow and fast never meet, return None as no cycle exists.
-
-4\. Reset slow to the head after the first meeting point.
+4\. Reset `slow` to the head after the first meeting point.
 
 5\. Move both pointers one step at a time until they meet again.
 
@@ -88,67 +64,32 @@ pos is -1 or a valid index in the linked-list.
 
 
 
-
-
-\\## Complexity Analysis
-
+\---
 
 
 
+\## Complexity Analysis
 
 
 
-\\### Time Complexity
+\### Time Complexity
+
+\- \*\*O(N)\*\*
 
 
 
+\### Space Complexity
+
+\- \*\*O(1)\*\*
 
 
 
-
-\\\* \\\*\\\*O(N)\\\*\\\*
-
+\---
 
 
 
+\## LeetCode Problem
 
 
 
-\\### Space Complexity
-
-
-
-
-
-
-
-\\\* \\\*\\\*O(1)\\\*\\\*
-
-
-
-
-
-
-
-\\---
-
-
-
-
-
-
-
-\\## LeetCode Problem
-
-
-
-
-
-
-
-\\\* \\\*\\\*Middle of the Linked List:\\\*\\\* https://leetcode.com/problems/linked-list-cycle-ii/solutions/8367783/linkedlist-cycle-2-by-9w0hwvxjmq-owic
-
-
-
-
-
+\- \*\*Linked List Cycle II:\*\* https://leetcode.com/problems/linked-list-cycle-ii/solutions/8367783/linkedlist-cycle-2-by-9w0hwvxjmq-owic
