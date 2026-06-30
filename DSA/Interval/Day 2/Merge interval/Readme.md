@@ -21,15 +21,12 @@ Given an array of intervals where `intervals[i] = [starti, endi]`, merge all ove
 
 1. Sort the intervals based on their starting time.
 2. Traverse each interval.
-3. If the result array is empty or the last interval in the result does not overlap with the current interval, append the current interval.
+3. If the result array is not empty or the last interval in the result does not overlap with the current interval, append the current interval.
 4. Otherwise, merge the intervals by updating the end time to the maximum of the current interval's end time and the last interval's end time in the result.
 5. Return the result array.
 
 ---
 
-## Algorithm
-
-**Merge Intervals**
 
 ### Time Complexity
 

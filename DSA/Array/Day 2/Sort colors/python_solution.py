@@ -4,7 +4,7 @@ class Solution:
         low = 0
         mid = 0
         high = n-1
-        while(mid<n):
+        while(mid<=high):
             if nums[mid] == 0:
                 nums[mid],nums[low] = nums[low],nums[mid]
                 mid+=1

@@ -29,9 +29,6 @@ Given an array of intervals where `intervals[i] = [starti, endi]`, return the mi
 
 ---
 
-## Algorithm
-
-**Greedy + Sorting**
 
 ### Time Complexity
 
