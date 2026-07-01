@@ -1,18 +1,18 @@
-\# Linked List 5: Reverse Even Length Groups
+# Linked List 5: Reverse Even Length Groups
 
 
 
-\## Pattern
+## Pattern
 
 Reverse groups
 
 
 
-\---
+---
 
 
 
-\## Problem Statement
+## Problem Statement
 
 Nodes are grouped as:
 
@@ -24,51 +24,51 @@ Reverse only even-sized groups.
 
 
 
-\---
+---
 
 
 
-\## Optimal Approach
+## Optimal Approach
 
-1\. Traverse group by group  
+1. Traverse group by group  
 
-2\. Count nodes in each group  
+2. Count nodes in each group  
 
-3\. If group size is even → reverse  
+3. If group size is even → reverse  
 
-4\. Else → skip  
+4. Else → skip  
 
-5\. Move to next group  
-
-
-
-\---
+5. Move to next group  
 
 
 
-\## Why it works
+---
+
+
+
+## Why it works
 
 Group sizes are deterministic, so we can safely process each independently.
 
 
 
-\---
+---
 
 
 
-\## Complexity
+## Complexity
 
-\- Time: O(N)  
+- Time: O(N)  
 
-\- Space: O(1)
-
-
-
-\---
+- Space: O(1)
 
 
 
-\## LeetCode
+---
+
+
+
+## LeetCode
 
 https://leetcode.com/problems/reverse-nodes-in-even-length-groups/solutions/8369015/reverse-nodes-in-even-length-groups-by-9-g6xb
 
