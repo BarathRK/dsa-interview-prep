@@ -1,18 +1,18 @@
-\# Linked List 6: Reorder List
+# Linked List 6: Reorder List
 
 
 
-\## Pattern
+## Pattern
 
 Divide and Reconnect
 
 
 
-\---
+---
 
 
 
-\## Problem Statement
+## Problem Statement
 
 Reorder list as:
 
@@ -20,47 +20,47 @@ L0 → Ln → L1 → Ln-1 → ...
 
 
 
-\---
+---
 
 
 
-\## Optimal Approach
+## Optimal Approach
 
-1\. Find middle  
+1. Find middle  
 
-2\. Reverse second half  
+2. Reverse second half  
 
-3\. Merge both halves alternately  
-
-
-
-\---
+3. Merge both halves alternately  
 
 
 
-\## Why it works
+---
+
+
+
+## Why it works
 
 Reversing second half aligns both ends for alternating merge.
 
 
 
-\---
+---
 
 
 
-\## Complexity
+## Complexity
 
-\- Time: O(N)  
+- Time: O(N)  
 
-\- Space: O(1)
-
-
-
-\---
+- Space: O(1)
 
 
 
-\## LeetCode
+---
+
+
+
+## LeetCode
 
 https://leetcode.com/problems/reorder-list/solutions/8369116/reorder-list-by-9w0hwvxjmq-bl5h
 
