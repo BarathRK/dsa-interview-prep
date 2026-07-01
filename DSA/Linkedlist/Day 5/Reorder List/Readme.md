@@ -2,13 +2,7 @@
 
 
 
-\---
-
-
-
 \## Pattern
-
-
 
 Divide and Reconnect
 
@@ -20,35 +14,9 @@ Divide and Reconnect
 
 \## Problem Statement
 
+Reorder list as:
 
-
-Given a singly linked list:
-
-
-
-L0 → L1 → … → Ln
-
-
-
-Reorder it as:
-
-
-
-L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → …
-
-
-
-\---
-
-
-
-\## Constraints
-
-
-
-\- 1 <= number of nodes <= 50000
-
-\- 1 <= Node.val <= 1000
+L0 → Ln → L1 → Ln-1 → ...
 
 
 
@@ -58,17 +26,11 @@ L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → …
 
 \## Optimal Approach
 
+1\. Find middle  
 
+2\. Reverse second half  
 
-1\. Find middle using slow and fast pointers
-
-2\. Reverse second half
-
-3\. Split list into two halves
-
-4\. Merge both halves alternately
-
-5\. Return head
+3\. Merge both halves alternately  
 
 
 
@@ -78,11 +40,7 @@ L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → …
 
 \## Why it works
 
-
-
-Reversing second half aligns end elements,
-
-allowing alternate merging from both ends.
+Reversing second half aligns both ends for alternating merge.
 
 
 
@@ -90,19 +48,11 @@ allowing alternate merging from both ends.
 
 
 
-\## Complexity Analysis
+\## Complexity
 
+\- Time: O(N)  
 
-
-\### Time Complexity
-
-\- O(N)
-
-
-
-\### Space Complexity
-
-\- O(1)
+\- Space: O(1)
 
 
 
@@ -110,9 +60,7 @@ allowing alternate merging from both ends.
 
 
 
-\## LeetCode Problem
-
-
+\## LeetCode
 
 https://leetcode.com/problems/reorder-list/solutions/8369116/reorder-list-by-9w0hwvxjmq-bl5h
 

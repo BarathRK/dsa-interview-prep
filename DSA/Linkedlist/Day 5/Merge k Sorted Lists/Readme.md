@@ -2,13 +2,7 @@
 
 
 
-\---
-
-
-
 \## Pattern
-
-
 
 Merge lists (Heap / Priority Queue)
 
@@ -19,8 +13,6 @@ Merge lists (Heap / Priority Queue)
 
 
 \## Problem Statement
-
-
 
 You are given an array of k linked lists, where each linked list is sorted in ascending order.
 
@@ -36,19 +28,17 @@ Merge all the linked lists into one sorted linked list and return it.
 
 \## Constraints
 
+\- k == lists.length  
 
+\- 0 <= k <= 10000  
 
-\- k == lists.length
+\- 0 <= lists\[i].length <= 500  
 
-\- 0 <= k <= 10000
+\- -10000 <= lists\[i]\[j] <= 10000  
 
-\- 0 <= lists\[i].length <= 500
+\- Each list is sorted  
 
-\- -10000 <= lists\[i]\[j] <= 10000
-
-\- Each lists\[i] is sorted in ascending order
-
-\- Total number of nodes across all lists will not exceed 10000
+\- Total nodes ≤ 10000  
 
 
 
@@ -58,19 +48,15 @@ Merge all the linked lists into one sorted linked list and return it.
 
 \## Optimal Approach
 
+1\. Push all list heads into a min heap  
 
+2\. Extract smallest node  
 
-1\. Push the head of each linked list into a min heap
+3\. Attach to result list  
 
-2\. While heap is not empty:
+4\. Push next node from same list  
 
-&#x20;  - Extract the smallest node
-
-&#x20;  - Attach it to result list
-
-&#x20;  - Push next node from same list (if exists)
-
-3\. Continue until heap becomes empty
+5\. Repeat until heap is empty  
 
 
 
@@ -80,19 +66,7 @@ Merge all the linked lists into one sorted linked list and return it.
 
 \## Why it works
 
-
-
-A min heap always gives the smallest available node among all k lists.
-
-
-
-So at every step:
-
-\- We pick the smallest node
-
-\- Maintain sorted order naturally
-
-\- Build final merged list incrementally
+A min heap always gives the smallest available node across all lists, ensuring sorted order.
 
 
 
@@ -100,19 +74,11 @@ So at every step:
 
 
 
-\## Complexity Analysis
+\## Complexity
 
+\- Time: O(N log K)  
 
-
-\### Time Complexity
-
-\- O(N log K)
-
-
-
-\### Space Complexity
-
-\- O(K)
+\- Space: O(K)
 
 
 
@@ -120,9 +86,7 @@ So at every step:
 
 
 
-\## LeetCode Problem
-
-
+\## LeetCode
 
 https://leetcode.com/problems/merge-k-sorted-lists/solutions/8369342/merge-k-sorted-lists-by-9w0hwvxjmq-gimr
 

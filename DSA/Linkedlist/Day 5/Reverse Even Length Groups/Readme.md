@@ -2,13 +2,7 @@
 
 
 
-\---
-
-
-
 \## Pattern
-
-
 
 Reverse groups
 
@@ -20,29 +14,13 @@ Reverse groups
 
 \## Problem Statement
 
-
-
-Nodes are grouped in sizes:
+Nodes are grouped as:
 
 1, 2, 3, 4, ...
 
 
 
-Reverse only groups with even length.
-
-
-
-\---
-
-
-
-\## Constraints
-
-
-
-\- 1 <= number of nodes <= 100000
-
-\- 0 <= Node.val <= 100000
+Reverse only even-sized groups.
 
 
 
@@ -52,19 +30,15 @@ Reverse only groups with even length.
 
 \## Optimal Approach
 
+1\. Traverse group by group  
 
+2\. Count nodes in each group  
 
-1\. Start with group\_size = 1
+3\. If group size is even → reverse  
 
-2\. Traverse list group by group
+4\. Else → skip  
 
-3\. Count actual nodes in current group
-
-4\. If group size is even → reverse group
-
-5\. Else → keep as it is
-
-6\. Move to next group and increment size
+5\. Move to next group  
 
 
 
@@ -74,13 +48,7 @@ Reverse only groups with even length.
 
 \## Why it works
 
-
-
-Each group size is predefined.
-
-We only modify groups with even sizes,
-
-keeping structure consistent.
+Group sizes are deterministic, so we can safely process each independently.
 
 
 
@@ -88,19 +56,11 @@ keeping structure consistent.
 
 
 
-\## Complexity Analysis
+\## Complexity
 
+\- Time: O(N)  
 
-
-\### Time Complexity
-
-\- O(N)
-
-
-
-\### Space Complexity
-
-\- O(1)
+\- Space: O(1)
 
 
 
@@ -108,9 +68,7 @@ keeping structure consistent.
 
 
 
-\## LeetCode Problem
-
-
+\## LeetCode
 
 https://leetcode.com/problems/reverse-nodes-in-even-length-groups/solutions/8369015/reverse-nodes-in-even-length-groups-by-9-g6xb
 
