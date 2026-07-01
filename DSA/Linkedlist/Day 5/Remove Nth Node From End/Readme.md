@@ -52,33 +52,13 @@ Given the head of a linked list, remove the nth node from the end of the list an
 
 
 
-1\. Reverse the linked list  
+1\. Reverse the linked list
 
-2\. Traverse to the nth node from the beginning  
+2\. Traverse to the nth node from beginning
 
-3\. Remove that node by changing the previous node's next pointer  
+3\. Remove it
 
-4\. Reverse the linked list again  
-
-
-
-\---
-
-
-
-\## Complexity Analysis
-
-
-
-\### Time Complexity
-
-\- O(3N)
-
-
-
-\### Space Complexity
-
-\- O(1)
+4\. Reverse again
 
 
 
@@ -90,19 +70,19 @@ Given the head of a linked list, remove the nth node from the end of the list an
 
 
 
-1\. Create a dummy node and point its next to head  
+1\. Create dummy node pointing to head
 
-2\. Initialize slow and fast pointers to dummy  
+2\. Use slow and fast pointers at dummy
 
-3\. Move fast pointer n + 1 steps forward  
+3\. Move fast pointer n+1 steps ahead
 
-4\. Move both pointers one step at a time until fast reaches the end  
+4\. Move both until fast reaches end
 
-5\. Slow pointer will be just before the node to delete  
+5\. Slow will be before target node
 
-6\. Skip the nth node using slow.next = slow.next.next  
+6\. Skip target using slow.next = slow.next.next
 
-7\. Return dummy.next  
+7\. Return dummy.next
 
 
 
@@ -114,7 +94,9 @@ Given the head of a linked list, remove the nth node from the end of the list an
 
 
 
-We use a fast-slow pointer with a fixed gap so that when fast reaches the end, slow lands exactly before the node to delete.
+Fast pointer creates a fixed gap so when it reaches the end,
+
+slow pointer is exactly before the node to delete.
 
 
 
@@ -146,5 +128,5 @@ We use a fast-slow pointer with a fixed gap so that when fast reaches the end, s
 
 
 
-\- Remove Nth node from End: https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/8368933/remove-nth-node-from-the-end-by-9w0hwvxj-hvpz
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/8368933/remove-nth-node-from-the-end-by-9w0hwvxj-hvpz
 

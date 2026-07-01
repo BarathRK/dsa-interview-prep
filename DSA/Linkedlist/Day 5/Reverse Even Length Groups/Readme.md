@@ -22,27 +22,13 @@ Reverse groups
 
 
 
-You are given the head of a linked list.
+Nodes are grouped in sizes:
+
+1, 2, 3, 4, ...
 
 
 
-The nodes in the linked list are sequentially assigned to non-empty groups whose lengths form the sequence of natural numbers (1, 2, 3, 4, ...).
-
-
-
-\- The 1st node is assigned to group 1
-
-\- The next 2 nodes are assigned to group 2
-
-\- The next 3 nodes are assigned to group 3, and so on
-
-
-
-If the last group has fewer nodes than required, it contains all remaining nodes.
-
-
-
-Reverse the nodes in each group that has an even length, and return the modified linked list.
+Reverse only groups with even length.
 
 
 
@@ -68,53 +54,17 @@ Reverse the nodes in each group that has an even length, and return the modified
 
 
 
-1\. Initialize:
+1\. Start with group\_size = 1
 
-&#x20;  - dummy node
+2\. Traverse list group by group
 
-&#x20;  - prev\_group\_end pointer
+3\. Count actual nodes in current group
 
-&#x20;  - curr pointer
+4\. If group size is even → reverse group
 
-&#x20;  - group\_size = 1
+5\. Else → keep as it is
 
-
-
-2\. Traverse the list while curr is not null
-
-
-
-3\. For each group:
-
-&#x20;  - Count actual nodes using a temporary pointer
-
-
-
-4\. If group size is even:
-
-&#x20;  - Reverse exactly those nodes
-
-
-
-5\. Reconnect the reversed group with previous and next parts
-
-
-
-6\. If group size is odd:
-
-&#x20;  - Move pointers without reversing
-
-
-
-7\. Update prev\_group\_end and curr
-
-
-
-8\. Increment group\_size
-
-
-
-9\. Return dummy.next
+6\. Move to next group and increment size
 
 
 
@@ -126,21 +76,11 @@ Reverse the nodes in each group that has an even length, and return the modified
 
 
 
-Each group is formed with increasing sizes (1, 2, 3, ...).  
+Each group size is predefined.
 
-We only reverse groups with even sizes, so we:
+We only modify groups with even sizes,
 
-
-
-\- Identify group boundaries
-
-\- Measure group length
-
-\- Reverse only when required
-
-
-
-This keeps the structure intact while modifying only valid groups.
+keeping structure consistent.
 
 
 
@@ -171,8 +111,6 @@ This keeps the structure intact while modifying only valid groups.
 \## LeetCode Problem
 
 
-
-\- Reverse Nodes in Even Length Groups  
 
 https://leetcode.com/problems/reverse-nodes-in-even-length-groups/solutions/8369015/reverse-nodes-in-even-length-groups-by-9-g6xb
 

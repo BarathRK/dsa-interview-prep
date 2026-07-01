@@ -38,17 +38,17 @@ Merge all the linked lists into one sorted linked list and return it.
 
 
 
-\- k == lists.length  
+\- k == lists.length
 
-\- 0 <= k <= 10000  
+\- 0 <= k <= 10000
 
-\- 0 <= lists\[i].length <= 500  
+\- 0 <= lists\[i].length <= 500
 
-\- -10000 <= lists\[i]\[j] <= 10000  
+\- -10000 <= lists\[i]\[j] <= 10000
 
-\- Each lists\[i] is sorted in ascending order  
+\- Each lists\[i] is sorted in ascending order
 
-\- Total number of nodes across all lists will not exceed 10000  
+\- Total number of nodes across all lists will not exceed 10000
 
 
 
@@ -60,17 +60,17 @@ Merge all the linked lists into one sorted linked list and return it.
 
 
 
-1\. Push the head of each linked list into a min heap  
+1\. Push the head of each linked list into a min heap
 
-2\. Repeatedly:
+2\. While heap is not empty:
 
-&#x20;  - Extract the smallest node from the heap  
+&#x20;  - Extract the smallest node
 
-&#x20;  - Attach it to the result list  
+&#x20;  - Attach it to result list
 
-&#x20;  - Push the next node from that same list (if exists)  
+&#x20;  - Push next node from same list (if exists)
 
-3\. Continue until the heap becomes empty  
+3\. Continue until heap becomes empty
 
 
 
@@ -82,21 +82,17 @@ Merge all the linked lists into one sorted linked list and return it.
 
 
 
-A min heap always gives the smallest current node among all k lists.
+A min heap always gives the smallest available node among all k lists.
 
 
 
 So at every step:
 
-\- We pick the smallest available node
+\- We pick the smallest node
 
 \- Maintain sorted order naturally
 
-\- Gradually build the final merged list
-
-
-
-This ensures correctness while efficiently handling multiple sorted streams.
+\- Build final merged list incrementally
 
 
 
@@ -127,8 +123,6 @@ This ensures correctness while efficiently handling multiple sorted streams.
 \## LeetCode Problem
 
 
-
-\- Merge K Sorted Lists  
 
 https://leetcode.com/problems/merge-k-sorted-lists/solutions/8369342/merge-k-sorted-lists-by-9w0hwvxjmq-gimr
 
